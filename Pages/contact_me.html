@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../Styles/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <link rel="stylesheet" href="../Styles/contact_me.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../Index.html"
+        ><img class="logo" src="../Images/Logo.JPG" alt=""
+      /></a>
+      <nav class="navigationbar">
+        <a class="tabs" href="#resume">Resume</a>
+        <a class="tabs" href="#">Contact Me</a>
+        <a class="tabs" href="#work">Work</a>
+        <a class="tabs" href="#aboutme">About Me</a>
+        <a class="tabs" href="./sign_in.html">Sign In</a>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <form class="form-emailme">
+        <h1>Contact Me</h1>
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            minlength="0"
+            maxlength="40"
+          />
+          <input
+            class="message"
+            type="text"
+            name="text"
+            placeholder="Write Here"
+            minlength="0"
+            maxlength="9999"
+          />
+        </div>
+        <div class="form-group">
+          <button type="button">Send Email</button>
+        </div>
+        <p class="copyright">And you will hear back from me shortly</p>
+      </form>
+    </div>
+  </body>
+</html>

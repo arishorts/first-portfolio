@@ -1,0 +1,149 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: black;
+  font-size: 1.5rem;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  background-color: rgb(14, 14, 14);
+  width: 100vw;
+  height: 7vh;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.logo {
+  position: absolute;
+  height: 100%;
+}
+
+.navigationbar {
+  font-weight: 800;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 3rem;
+}
+
+nav a {
+  padding: 1.5vh 1rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  color: rgb(215, 215, 215);
+}
+
+nav a:hover {
+  background-color: rgb(39, 39, 39);
+  border-color: #7db0fb;
+  color: white;
+  box-shadow: 0 0 10px 10px rgba(24, 117, 255, 0.25);
+  border-radius: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.wrapper {
+  padding-top: 7vh; /*is there a more robust way of doing this? if i change
+  the nav bar size then this doesnt adjust automatically*/
+  box-sizing: border-box; /*is this messing up my code?*/
+  text-align: center;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-banner {
+  height: 40vh;
+  width: 100vw;
+  padding: 2% 6%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  color: white;
+}
+
+.hero-banner div {
+  flex: 0 0 90%;
+}
+
+.hero-banner h1 {
+  font-weight: 800;
+}
+
+.section1 {
+  height: 50vh;
+  text-align: center;
+  width: 75vw;
+  background-color: rgb(165, 48, 165);
+  display: inline-block;
+}
+
+.gallery {
+  /*Ideally i would like to center this vertically in the container
+  margin: 3rem 0rem 0rem 64rem;*/
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1rem;
+  width: 30%;
+  display: grid;
+  grid-template-columns: repeat(3, 102px);
+  grid-template-rows: repeat(3, 102px);
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+.gallery__image {
+  margin: 1rem;
+}
+
+.section2 {
+  text-align: center;
+  height: 50vh;
+  width: 75vw;
+  background-color: rgb(252, 87, 87);
+  display: inline-block;
+}
+
+aside {
+  text-align: center;
+  height: 100vh;
+  width: 25vw;
+  float: right; /*should i have done this with flexbox or grid instead?*/
+  background-color: rgb(58, 58, 243);
+}
+
+footer {
+  background-color: rgb(95, 240, 107);
+  height: 10vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.hero-banner {
+  background-image: url("../Images/pexels-pixabay-270348.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+@media screen and (max-width: 980px) {
+}
+
+@media screen and (max-width: 768px) {
+}

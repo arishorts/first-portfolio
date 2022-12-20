@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../Styles/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <link rel="stylesheet" href="../Styles/sign_in.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../Index.html"
+        ><img class="logo" src="../Images/Logo.JPG" alt=""
+      /></a>
+      <nav class="navigationbar">
+        <a class="tabs" href="#resume">Resume</a>
+        <a class="tabs" href="./contact_me.html">Contact Me</a>
+        <a class="tabs" href="#work">Work</a>
+        <a class="tabs" href="#aboutme">About Me</a>
+        <a class="tabs" href="#">Sign In</a>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <form class="form-signin">
+        <h1>Please Sign In</h1>
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            minlength="0"
+            maxlength="40"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            minlength="0"
+            maxlength="40"
+          />
+        </div>
+
+        <div class="form-group">
+          <input type="checkbox" id="remembermefield" />
+          <label class="label-inline" for="remembermefield">Remember Me</label>
+        </div>
+        <div class="form-group">
+          <button type="button">Sign In</button>
+        </div>
+        <p class="copyright">Copyright &copy; 2022</p>
+      </form>
+    </div>
+  </body>
+</html>
