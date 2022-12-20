@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  scroll-padding-top: 7vh;
 }
 
 body {
@@ -20,6 +21,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  top: 0;
+  left: 0;
 }
 
 .logo {
@@ -59,7 +62,6 @@ h4 {
 .wrapper {
   padding-top: 7vh; /*is there a more robust way of doing this? if i change
   the nav bar size then this doesnt adjust automatically*/
-  box-sizing: border-box; /*is this messing up my code?*/
   text-align: center;
   font-size: 3rem;
   display: flex;
@@ -69,23 +71,27 @@ h4 {
 .hero-banner {
   height: 40vh;
   width: 100vw;
-  padding: 2% 6%;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  text-align: right;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   color: white;
 }
 
-.hero-banner div {
-  flex: 0 0 90%;
+.hero-gallery {
+  height: 100%;
+}
+
+.hero-identity {
+  padding-right: 5vw;
+  padding-bottom: 23vh;
 }
 
 .hero-banner h1 {
   font-weight: 800;
 }
 
-.section1 {
+#about_me {
   height: 50vh;
   text-align: center;
   width: 75vw;
@@ -113,7 +119,7 @@ h4 {
   margin: 1rem;
 }
 
-.section2 {
+#work {
   text-align: center;
   height: 50vh;
   width: 75vw;
@@ -130,16 +136,19 @@ aside {
 }
 
 footer {
-  background-color: rgb(95, 240, 107);
-  height: 10vh;
+  background-color: black;
+  height: 40vh;
   width: 100vw;
-  text-align: center;
+  color: white;
+  padding-top: 2vh;
+  padding-left: 2vw;
+  font-weight: 1000;
 }
 
 .hero-banner {
   background-image: url("../Images/pexels-pixabay-270348.jpg");
   background-size: cover;
-  background-position: top;
+  background-position: right;
 }
 
 @media screen and (max-width: 980px) {

@@ -103,5 +103,10 @@ dist
 # TernJS port file
 .tern-port
 
-#Solved folder
+#Additional Items
 Solved/
+Images/argentinaiguazu.jpg
+Images/guatape.jpg
+Images/july4th2022.jpg
+Images/laysfunny.jpg
+Styles/test.css
