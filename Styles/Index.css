@@ -1,6 +1,10 @@
 html {
   font-size: 62.5%;
   scroll-padding-top: 7vh;
+  --smallnavheight: 25vh;
+  --largenavheight: 7vh;
+  --asidebackground: white;
+  --asidecolor: black;
 }
 
 body {
@@ -16,12 +20,13 @@ body {
 header {
   background-color: rgb(14, 14, 14);
   width: 100vw;
-  height: 7vh;
+  height: var(--largenavheight);
   position: fixed;
   display: flex;
   justify-content: space-between;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .logo {
@@ -49,6 +54,74 @@ nav a:hover {
   box-shadow: 0 0 10px 10px rgba(24, 117, 255, 0.25);
   border-radius: 1rem;
 }
+/*ASIDE QUOTES*/
+aside {
+  flex: 1 1 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  background: var(--asidebackground);
+}
+
+#ct {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 85%;
+  max-width: 60vw;
+  border: 1px solid var(--asidecolor);
+  position: relative;
+  color: var(--asidecolor);
+  z-index: 0;
+}
+
+span {
+  background: var(--asidebackground);
+  color: var(--asidecolor);
+  padding: 0 0.5rem;
+  font-size: 2rem;
+  position: absolute;
+  top: -11%;
+}
+.corner {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--asidecolor);
+  transform: rotate(-45deg);
+  position: absolute;
+  background: var(--asidebackground);
+}
+
+#left_top {
+  top: -16px;
+  left: -16px;
+  border-color: transparent transparent var(--asidecolor) transparent;
+}
+#right_top {
+  top: -16px;
+  right: -16px;
+  border-color: transparent transparent transparent var(--asidecolor);
+}
+#left_bottom {
+  bottom: -16px;
+  left: -16px;
+  border-color: transparent var(--asidecolor) transparent transparent;
+}
+#right_bottom {
+  bottom: -16px;
+  right: -16px;
+  border-color: var(--asidecolor) transparent transparent transparent;
+}
+p {
+  font-size: 1.8rem;
+  margin: auto 2rem;
+}
 
 /*HEADER CONTROL*/
 h1,
@@ -60,7 +133,9 @@ h4 {
 
 /*HERO*/
 .wrapper {
-  padding-top: 7vh; /*is there a more robust way of doing this? if i change
+  padding-top: var(
+    --largenavheight
+  ); /*is there a more robust way of doing this? if i change
   the nav bar size then this doesnt adjust automatically*/
   text-align: center;
   font-size: 3rem;
@@ -102,7 +177,7 @@ main {
 #about_me {
   flex: 1 1 50%;
   text-align: center;
-  background-color: rgb(165, 48, 165);
+  background-color: var(--asidebackground);
   display: inline-block;
 }
 
@@ -133,14 +208,6 @@ main {
   display: inline-block;
 }
 
-aside {
-  flex: 1 1 25%;
-  text-align: center;
-  height: 100%;
-  float: right; /*should i have done this with flexbox or grid instead?*/
-  background-color: rgb(58, 58, 243);
-}
-
 footer {
   background-color: black;
   height: 40vh;
@@ -160,20 +227,29 @@ footer {
 }
 
 .hero-photo {
+  max-width: auto;
   height: 100%;
 }
 
 /*RESPONSIVE DESIGN: MEDIA QUERIES*/
 @media screen and (max-width: 980px) {
+  span {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: auto 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
   html {
-    scroll-padding-top: 25vh;
+    scroll-padding-top: var(--smallnavheight);
   }
 
   header {
-    height: 25vh;
+    height: var(--smallnavheight);
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -225,5 +301,18 @@ footer {
   aside {
     flex: 0 0 25%;
     float: none;
+  }
+
+  #ct {
+    height: 30%;
+  }
+
+  span {
+    top: -15%;
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.6rem;
   }
 }
