@@ -16,6 +16,14 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/*HEADER CONTROL*/
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
 /*STICKY NAVIGATION BAR*/
 header {
   background-color: rgb(14, 14, 14);
@@ -34,14 +42,14 @@ header {
   height: 100%;
 }
 
-.navigationbar {
+.navigationbar__a {
   font-weight: 800;
   display: flex;
   flex-direction: row;
   margin-right: 3rem;
 }
 
-nav a {
+.navigationbar__a a {
   padding: 2vh 1rem;
   transition: border-color 0.15s, box-shadow 0.15s;
   color: rgb(215, 215, 215);
@@ -66,7 +74,7 @@ aside {
   background: var(--asidebackground);
 }
 
-#ct {
+.quote {
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -80,7 +88,7 @@ aside {
   z-index: 0;
 }
 
-span {
+.quote__span {
   background: var(--asidebackground);
   color: var(--asidecolor);
   padding: 0 0.5rem;
@@ -118,21 +126,13 @@ span {
   right: -16px;
   border-color: var(--asidecolor) transparent transparent transparent;
 }
-p {
+.quote__p {
   font-size: 1.8rem;
   margin: auto 2rem;
 }
 
-/*HEADER CONTROL*/
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-}
-
 /*HERO*/
-.wrapper {
+.herowrapper {
   padding-top: var(
     --largenavheight
   ); /*is there a more robust way of doing this? if i change
@@ -143,7 +143,7 @@ h4 {
   flex-direction: column;
 }
 
-.hero-banner {
+.hero {
   height: 40vh;
   width: 100vw;
   display: flex;
@@ -153,12 +153,12 @@ h4 {
   color: white;
 }
 
-.hero-identity {
+.hero__div {
   padding-right: 5vw;
   padding-bottom: 23vh;
 }
 
-.hero-banner h1 {
+.hero__div h1 {
   font-weight: 800;
 }
 
@@ -168,7 +168,7 @@ main {
   height: 100vh;
 }
 
-.div__main {
+.main__div {
   flex: 3 3 75%;
   display: flex;
   flex-direction: column;
@@ -178,16 +178,26 @@ main {
   flex: 1 1 50%;
   text-align: center;
   background-color: var(--asidebackground);
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
 }
 
-.gallery {
+#work {
+  flex: 1 1 50%;
+  text-align: center;
+  background-color: rgb(252, 87, 87);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#work .gallery {
   /*Ideally i would like to center this vertically in the container
   margin: 3rem 0rem 0rem 64rem;*/
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 1rem;
-  width: 30%;
+
+  width: 40%;
   display: grid;
   grid-template-columns: repeat(3, 102px);
   grid-template-rows: repeat(3, 102px);
@@ -201,13 +211,7 @@ main {
   margin: 1rem;
 }
 
-#work {
-  flex: 1 1 50%;
-  text-align: center;
-  background-color: rgb(252, 87, 87);
-  display: inline-block;
-}
-
+/*FOOTER*/
 footer {
   background-color: black;
   height: 40vh;
@@ -219,25 +223,24 @@ footer {
 }
 
 /*IMAGES*/
-
-.hero-banner {
+.hero {
   background-image: url("../Images/pexels-pixabay-270348.jpg");
   background-size: cover;
   background-position: right;
 }
 
-.hero-photo {
+.hero__img {
   max-width: auto;
   height: 100%;
 }
 
 /*RESPONSIVE DESIGN: MEDIA QUERIES*/
 @media screen and (max-width: 980px) {
-  span {
+  .quote__span {
     font-size: 1.7rem;
   }
 
-  p {
+  .quote__p {
     font-size: 1.5rem;
     margin: auto 1rem;
   }
@@ -257,7 +260,7 @@ footer {
     left: 0;
   }
 
-  .navigationbar {
+  .navigationbar__a {
     line-height: 1;
     margin-right: 0;
     font-size: 3rem;
@@ -270,19 +273,19 @@ footer {
     display: none;
   }
 
-  nav a {
+  .navigationbar__a a {
     padding: 1vh 0rem;
   }
 
-  .wrapper {
+  .herowrapper {
     padding-top: 25vh;
   }
 
-  .hero-banner {
+  .hero {
     height: 100%;
   }
 
-  .hero-identity {
+  .hero__div {
     display: none;
     padding-right: 0vw;
     padding-bottom: 0vh;
@@ -294,7 +297,7 @@ footer {
     height: 200vh;
   }
 
-  .div__main {
+  .main__div {
     flex: 0 0 75%;
   }
 
@@ -303,16 +306,16 @@ footer {
     float: none;
   }
 
-  #ct {
+  .quote {
     height: 30%;
   }
 
-  span {
+  .quote__span {
     top: -15%;
     font-size: 1.8rem;
   }
 
-  p {
+  .quote__p {
     font-size: 1.6rem;
   }
 }
