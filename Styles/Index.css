@@ -8,11 +8,11 @@ body {
   font-size: 1.5rem;
   margin: 0;
   width: 100vw;
-  height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/*STICKY NAVIGATION BAR*/
 header {
   background-color: rgb(14, 14, 14);
   width: 100vw;
@@ -20,7 +20,6 @@ header {
   position: fixed;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
   top: 0;
   left: 0;
 }
@@ -34,12 +33,11 @@ header {
   font-weight: 800;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   margin-right: 3rem;
 }
 
 nav a {
-  padding: 1.5vh 1rem;
+  padding: 2vh 1rem;
   transition: border-color 0.15s, box-shadow 0.15s;
   color: rgb(215, 215, 215);
 }
@@ -52,6 +50,7 @@ nav a:hover {
   border-radius: 1rem;
 }
 
+/*HEADER CONTROL*/
 h1,
 h2,
 h3,
@@ -59,6 +58,7 @@ h4 {
   margin: 0;
 }
 
+/*HERO*/
 .wrapper {
   padding-top: 7vh; /*is there a more robust way of doing this? if i change
   the nav bar size then this doesnt adjust automatically*/
@@ -87,10 +87,21 @@ h4 {
   font-weight: 800;
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.div__main {
+  flex: 3 3 75%;
+  display: flex;
+  flex-direction: column;
+}
+
 #about_me {
-  height: 50vh;
+  flex: 1 1 50%;
   text-align: center;
-  width: 75vw;
   background-color: rgb(165, 48, 165);
   display: inline-block;
 }
@@ -116,17 +127,16 @@ h4 {
 }
 
 #work {
+  flex: 1 1 50%;
   text-align: center;
-  height: 50vh;
-  width: 75vw;
   background-color: rgb(252, 87, 87);
   display: inline-block;
 }
 
 aside {
+  flex: 1 1 25%;
   text-align: center;
-  height: 100vh;
-  width: 25vw;
+  height: 100%;
   float: right; /*should i have done this with flexbox or grid instead?*/
   background-color: rgb(58, 58, 243);
 }
@@ -154,17 +164,12 @@ footer {
 }
 
 /*RESPONSIVE DESIGN: MEDIA QUERIES*/
-
 @media screen and (max-width: 980px) {
 }
 
 @media screen and (max-width: 768px) {
   html {
-    scroll-padding-top: 20vh;
-  }
-
-  .wrapper {
-    padding-top: 20vh;
+    scroll-padding-top: 30vh;
   }
 
   header {
@@ -177,7 +182,9 @@ footer {
   }
 
   .navigationbar {
-    font-size: 2rem;
+    line-height: 1;
+    margin-right: 0;
+    font-size: 3rem;
     font-weight: 700;
     flex-direction: column;
     text-align: center;
@@ -188,6 +195,35 @@ footer {
   }
 
   nav a {
-    padding: 0.5vh 0rem;
+    padding: 1vh 0rem;
+  }
+
+  .wrapper {
+    padding-top: 20vh;
+  }
+
+  .hero-banner {
+    height: 100%;
+  }
+
+  .hero-identity {
+    display: none;
+    padding-right: 0vw;
+    padding-bottom: 0vh;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+  }
+
+  .div__main {
+    flex: 0 0 75%;
+  }
+
+  aside {
+    flex: 0 0 25%;
+    float: none;
   }
 }
