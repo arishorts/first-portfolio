@@ -1,10 +1,15 @@
 html {
   font-size: 62.5%;
+  scroll-padding-top: 7vh;
+  --smallnavheight: 25vh;
+  --largenavheight: 7vh;
+  --asidebackground: white;
+  --asidecolor: black;
 }
 
 body {
   color: black;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -12,36 +17,38 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-header {
+/*STICKY NAVIGATION BAR*/
+.navigationbar {
   background-color: rgb(14, 14, 14);
   width: 100vw;
-  height: 7vh;
+  height: var(--largenavheight);
   position: fixed;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.logo {
+.navigationbar__img {
   position: absolute;
   height: 100%;
 }
 
-.navigationbar {
+.navigationbar__nav {
   font-weight: 800;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   margin-right: 3rem;
 }
 
-nav a {
-  padding: 1.5vh 1rem;
+.navigationbar__nav a {
+  padding: 2vh 1rem;
   transition: border-color 0.15s, box-shadow 0.15s;
   color: rgb(215, 215, 215);
 }
 
-nav a:hover {
+.navigationbar__nav a:hover {
   background-color: rgb(39, 39, 39);
   border-color: #7db0fb;
   color: white;
@@ -50,6 +57,7 @@ nav a:hover {
 }
 
 .wrapper {
+  padding-top: var(--largenavheight);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,7 +67,7 @@ nav a:hover {
 }
 
 form {
-  width: 45%;
+  width: 55%;
   padding: 2rem;
   text-align: center;
 }
@@ -93,4 +101,45 @@ input[type="email"]:focus,
 input[type="text"]:focus {
   border-color: #7db0fb;
   box-shadow: 0 0 0 4px rgba(24, 117, 255, 0.25);
+}
+
+/*RESPONSIVE DESIGN: MEDIA QUERIES*/
+@media screen and (max-width: 980px) {
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    scroll-padding-top: var(--smallnavheight);
+  }
+
+  .wrapper {
+    padding-top: var(--smallnavheight);
+  }
+
+  .navigationbar {
+    height: var(--smallnavheight);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navigationbar__nav {
+    line-height: 1;
+    margin-right: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navigationbar__img {
+    display: none;
+  }
+
+  .navigationbar__nav a {
+    padding: 1vh 0rem;
+  }
+
+  form {
+    width: 75%;
+  }
 }
