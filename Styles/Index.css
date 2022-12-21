@@ -169,11 +169,11 @@ footer {
 
 @media screen and (max-width: 768px) {
   html {
-    scroll-padding-top: 30vh;
+    scroll-padding-top: 25vh;
   }
 
   header {
-    height: 30vh;
+    height: 25vh;
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -199,7 +199,7 @@ footer {
   }
 
   .wrapper {
-    padding-top: 20vh;
+    padding-top: 25vh;
   }
 
   .hero-banner {
