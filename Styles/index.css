@@ -262,6 +262,19 @@ footer a {
 }
 
 @media screen and (max-width: 980px) {
+  #work .gallery {
+    width: 80%;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 100px);
+  }
+
+  .box {
+    margin: 0rem;
+  }
+
+  .box-one {
+    grid-column: 1/2;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -332,19 +345,5 @@ footer a {
 
   .quote__p {
     font-size: 1.6rem;
-  }
-
-  #work .gallery {
-    width: 80%;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(6, 100px);
-  }
-
-  .box {
-    margin: 0rem;
-  }
-
-  .box-one {
-    grid-column: 1/2;
   }
 }
