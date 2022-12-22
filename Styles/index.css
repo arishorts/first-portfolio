@@ -207,20 +207,24 @@ aside {
 }
 
 #work .gallery {
-  /*how do i get these to wrap when squished?*/
   margin: 1rem 2rem;
-  width: 40%;
+  width: 70%;
   display: grid;
-  grid-template-columns: repeat(3, 102px);
-  grid-template-rows: repeat(3, 102px);
-  align-content: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(4, 100px);
   justify-content: center;
-  align-items: stretch;
-  justify-items: stretch;
+  align-content: center;
+  gap: 3rem;
 }
 
-.gallery__image {
-  margin: 1rem;
+.box {
+  background: blue;
+  color: white;
+}
+
+.box-one {
+  grid-column: 1/3;
+  grid-row: 1/3;
 }
 
 /*FOOTER*/
@@ -231,6 +235,10 @@ footer {
   padding-top: 2vh;
   padding-left: 2vw;
   font-weight: 1000;
+}
+
+footer a {
+  margin: 2rem;
 }
 
 /*RESPONSIVE DESIGN: MEDIA QUERIES*/
@@ -314,11 +322,29 @@ footer {
     flex: 1 1 0;
   }
 
+  .box-one {
+    grid-row: 1/3;
+  }
+
   .quote__span {
     font-size: 1.8rem;
   }
 
   .quote__p {
     font-size: 1.6rem;
+  }
+
+  #work .gallery {
+    width: 80%;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 100px);
+  }
+
+  .box {
+    margin: 0rem;
+  }
+
+  .box-one {
+    grid-column: 1/2;
   }
 }
