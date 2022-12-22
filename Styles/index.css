@@ -4,7 +4,7 @@ buttons dont go away once i press them*/
 html {
   font-size: 62.5%;
   scroll-padding-top: 7vh;
-  --smallnavheight: 25vh;
+  --smallnavheight: 30vh;
   --largenavheight: 7vh;
   --asidebackground: white;
   --asidecolor: black;
@@ -60,20 +60,9 @@ h4 {
   color: rgb(215, 215, 215);
 }
 
-.navigationbar__nav a:hover {
-  background-color: rgb(39, 39, 39);
-  border-color: #7db0fb;
-  color: white;
-  box-shadow: 0 0 10px 10px rgba(24, 117, 255, 0.25);
-  border-radius: 1rem;
-}
-
 /*HERO*/
 .herowrapper {
-  padding-top: var(
-    --largenavheight
-  ); /*is there a more robust way of doing this? if i change
-  the nav bar size then this doesnt adjust automatically*/
+  padding-top: var(--largenavheight);
   text-align: center;
   font-size: 3rem;
   display: flex;
@@ -245,6 +234,25 @@ footer {
 }
 
 /*RESPONSIVE DESIGN: MEDIA QUERIES*/
+@media (hover) {
+  /*If the device can hover as its primary pointer, then this will activate*/
+
+  .navigationbar__nav a:hover {
+    background-color: rgb(39, 39, 39);
+    border-color: #7db0fb;
+    color: white;
+    box-shadow: 0 0 10px 10px rgba(24, 117, 255, 0.25);
+    border-radius: 2rem;
+  }
+  .navigationbar__nav a:visited {
+    background-color: rgb(14, 14, 14);
+    border-color: rgb(14, 14, 14);
+    color: rgb(215, 215, 215);
+    box-shadow: rgb(14, 14, 14);
+    border-radius: 0rem;
+  }
+}
+
 @media screen and (max-width: 980px) {
 }
 
