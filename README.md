@@ -1,93 +1,80 @@
-# Module 01 Mini-Project: Landing Page
+# <Your-Project-Title>
 
-In this mini-project, you will build a landing page using HTML and CSS. While you will be responsible for your own landing page, you will work in a group to brainstorm and share ideas.
+## Description
 
-## Instructions
+Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-Work in your group to implement the following user stories:
+AS AN employer
+I WANT to view a potential employee's deployed portfolio of work samples
+SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
 
-* As a client, I want to view a single webpage that collects a visitor's contact information.
+- What was your motivation?
+- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+- What problem does it solve?
+- What did you learn?
 
-* As a client, I want the landing page to have a header and footer.
+GIVEN I need to sample a potential employee's previous work
+WHEN I load their portfolio
+THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
+WHEN I click one of the links in the navigation
+THEN the UI scrolls to the corresponding section
+WHEN I click on the link to the section about their work
+THEN the UI scrolls to a section with titled images of the developer's applications
+WHEN I am presented with the developer's first application
+THEN that application's image should be larger in size than the others
+WHEN I click on the images of the applications
+THEN I am taken to that deployed application
+WHEN I resize the page or view the site on various screens and devices
+THEN I am presented with a responsive layout that adapts to my viewport
 
-* As a client, I want the landing page to have an image with a caption.
+## Table of Contents (Optional)
 
-* As a client, I want the landing page to have a contact form.
+If your README is long, add a table of contents to make it easy for users to find what they need.
 
-* As a client, I want the landing page to have a polished and accessible UI.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Badges](#badges)
+- [How_to_Contribute](#how_to_contribute)
+- [Credits](#credits)
+- [License](#license)
 
-## Acceptance Criteria
+## Installation
 
-* It's done when the page uses semantic HTML elements.
+No installation needed.
 
-* It's done when the page uses universal, element, and class selectors in CSS.
+## Usage
 
-* It's done when the page features at least three colors in the design.
+The website can be found at: https://arishorts.github.io/portfolio/
 
-* It's done when the page uses a single font and font family for all text.
+Use the navigation bar to jump to different sections. <br>
+![alt text](./Images/navbarhowto.JPG)
 
-* It's done when the page uses at least two heading elements (`<h1>` through `<h6>`).
+Checkout some recent projects by clicking the boxes.<br>
+![alt text](./Images/projects.JPG)
 
-* It's done when the header is fixed to the top of the page on scroll.
+Click the icons to visit more of my portfolios. <br>
+![alt text](./Images/moreportfolios.JPG)
 
-* It's done when the header contains a navigation bar with three links that display inline, including a contact link.
+## Badges
 
-* It's done when, if the contact link is clicked, the page jumps directly to the contact form.
+![badmath](https://img.shields.io/badge/CSS-50%25-brightgreen) ![badmath](https://img.shields.io/badge/HTML-50%25-brightgreen)
 
-* It's done when the contact form includes `input` elements for name and email.
+## How_to_Contribute
 
-* It's done when the contact form includes a Send button.
+If you would like to contribute, refer to the [Contributor Covenant](https://www.contributor-covenant.org/)
 
-* It's done when the image includes a descriptive `alt` attribute.
+## Credits
 
-* It's done when the page is deployed to GitHub Pages.
+- Tuan Nguyen: https://github.com/KHG17
+- Mosh Hamedani: https://github.com/mosh-hamedani
+- Contact Me Page: https://codewithmosh.com/
+- Quotes: https://freefrontend.com/css-quote-styles/
+- Navigation Bar: https://dev.to/kiranrajvjd/10-simple-navigation-bar-hover-animations-1980
 
-## 💡 Notes
+## License
 
-Follow these instructions to deploy your project to GitHub Pages:
-
-1. Create a new repository on your GitHub account and clone it to your computer.
-
-2. When you're ready to deploy, use the `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
-
-3. Navigate to your GitHub repository in the browser and then select the Settings tab on the right side of the page.
-
-4. On the Settings page, select Pages on the left side of the page. On the GitHub Pages screen, choose `main` in the dropdown under Source.
-
-5. Navigate to <your-github-username.github.io/your-repository-name> and you will find that your new webpage has gone live! For example, if your GitHub username is "lernantino" and the project is "css-demo-site", then your URL would be <lernantino.github.io/css-demo-site>.
-
-You can also refer to this [YouTube video on enabling GitHub Pages](https://youtu.be/P4Mu1t5rIXg) for more guidance.
-
-> **Important**: It might take a few minutes for GitHub pages to display your site correctly. If your project does not deploy or display correctly, check that all file paths in your application are relative and use the right casing. GitHub is case-sensitive, an inccorect capital or lowercase letter could cause problems in deployment.
-
-## 💡 Hints
-
-Refer to the documentation:
-
-* [MDN Web Docs on HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-
-* [MDN Web Docs on color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
-
-* [MDN Web Docs on font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
-
-* [MDN Web Docs on HTML section heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
-
-* [MDN Web Docs on how to structure a web form](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-
-* [MDN Web Docs on the button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
-
-* [MDN Web Docs on the figure element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
-
-* [Full-Stack Blog HTML Cheatsheet](https://coding-boot-camp.github.io/full-stack/html/html-cheatsheet)
-
-## 🏆 Bonus
-
-If you have completed this activity, work through the following challenge with your group to further your knowledge:
-
-* How can CSS be used to apply a different style to an `<a>` element when a cursor points at it?
-
-Use [Google](https://www.google.com) or another search engine to research this.
+MIT License https://choosealicense.com/licenses/mit/
 
 ---
 
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© 2022 Ariel Schwartz LLC. Confidential and Proprietary. All Rights Reserved.
