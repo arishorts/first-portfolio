@@ -1,31 +1,19 @@
-# <Your-Project-Title>
+# Portfolio
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+I want potential employers to be able to view my deployed portfolio of work samples so that they can review and assess whether I'm a good candidate for an open position. This project serves as a educational tool early on in my coding journey to becoming a creative app developer. It enforces basic knowledge of HTML/CSS, markdown, git, github and fundamental practices for deploying a website. With it's deployment, I've officially released my first website and learned a number of skills including:
 
-AS AN employer
-I WANT to view a potential employee's deployed portfolio of work samples
-SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-GIVEN I need to sample a potential employee's previous work
-WHEN I load their portfolio
-THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
-WHEN I click one of the links in the navigation
-THEN the UI scrolls to the corresponding section
-WHEN I click on the link to the section about their work
-THEN the UI scrolls to a section with titled images of the developer's applications
-WHEN I am presented with the developer's first application
-THEN that application's image should be larger in size than the others
-WHEN I click on the images of the applications
-THEN I am taken to that deployed application
-WHEN I resize the page or view the site on various screens and devices
-THEN I am presented with a responsive layout that adapts to my viewport
+- semantic HTML elements
+- sticky navbar and hover effects
+- layout with flexbox and grid
+- element positioning
+- creating a README with markdown language
+- responsive layouts for multiple viewports
+- linking to sections and different pages
+- beautiful CSS implementation for blockquotes
+- deploying apps and pushing from git bash to github
+- and built low-level apps utilizing javascript HTML DOM
 
 ## Table of Contents (Optional)
 
