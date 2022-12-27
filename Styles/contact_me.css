@@ -17,6 +17,14 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/*HEADER CONTROL*/
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
 /*STICKY NAVIGATION BAR*/
 .navigationbar {
   background-color: rgb(14, 14, 14);
@@ -30,22 +38,55 @@ body {
   z-index: 1;
 }
 
-.navigationbar__img {
-  position: absolute;
-  height: 100%;
-}
-
 .navigationbar__nav {
   font-weight: 800;
   display: flex;
   flex-direction: row;
   margin-right: 3rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .navigationbar__nav a {
-  padding: 2vh 1rem;
   transition: border-color 0.15s, box-shadow 0.15s;
   color: rgb(215, 215, 215);
+  text-decoration: none;
+  margin: 0px 0.5rem;
+  padding: 10px 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  /* Border from Y to X  */
+  nav.borderYtoX a:before,
+  nav.borderYtoX a:after {
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: "";
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  nav.borderYtoX a:before {
+    left: 0px;
+    top: 0px;
+  }
+
+  nav.borderYtoX a:after {
+    right: 0px;
+    bottom: 0px;
+  }
+
+  nav.borderYtoX a:hover:before,
+  nav.borderYtoX a:hover:after {
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+  }
 }
 
 .wrapper {
@@ -78,40 +119,21 @@ button:hover {
   background: #0759d3;
 }
 
-input[type="text"] {
+textarea[type="message"] {
   height: 40vh;
 }
 
 input[type="email"],
-input[type="text"] {
+textarea[type="message"] {
   border: 1px solid #ccc;
   transition: border-color 0.15s, box-shadow 0.15s;
   border-radius: 1 rem;
 }
 
 input[type="email"]:focus,
-input[type="text"]:focus {
+textarea[type="text"]:focus {
   border-color: #7db0fb;
   box-shadow: 0 0 0 4px rgba(24, 117, 255, 0.25);
-}
-
-/*RESPONSIVE DESIGN: MEDIA QUERIES*/
-@media (hover) {
-  /*If the device can hover as its primary pointer, then this will activate*/
-  .navigationbar__nav a:hover {
-    background-color: rgb(39, 39, 39);
-    border-color: #7db0fb;
-    color: white;
-    box-shadow: 0 0 10px 10px rgba(24, 117, 255, 0.25);
-    border-radius: 2rem;
-  }
-  .navigationbar__nav a:visited {
-    background-color: rgb(14, 14, 14);
-    border-color: rgb(14, 14, 14);
-    color: rgb(215, 215, 215);
-    box-shadow: rgb(14, 14, 14);
-    border-radius: 0rem;
-  }
 }
 
 @media screen and (max-width: 980px) {
@@ -145,8 +167,15 @@ input[type="text"]:focus {
     display: none;
   }
 
+  nav.container a {
+    margin: none;
+    padding: 5px 5px;
+    cursor: pointer;
+  }
+
   .navigationbar__nav a {
-    padding: 1vh 0rem;
+    padding: none;
+    font-size: 100;
   }
 
   form {

@@ -42,23 +42,55 @@ h4 {
   z-index: 1;
 }
 
-.navigationbar__img {
-  position: absolute;
-  height: 100%;
-}
-
 .navigationbar__nav {
   font-weight: 800;
   display: flex;
   flex-direction: row;
   margin-right: 3rem;
   align-items: center;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .navigationbar__nav a {
-  padding: 0 1rem;
   transition: border-color 0.15s, box-shadow 0.15s;
   color: rgb(215, 215, 215);
+  text-decoration: none;
+  margin: 0px 0.5rem;
+  padding: 10px 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  /* Border from Y to X  */
+  nav.borderYtoX a:before,
+  nav.borderYtoX a:after {
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: "";
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  nav.borderYtoX a:before {
+    left: 0px;
+    top: 0px;
+  }
+
+  nav.borderYtoX a:after {
+    right: 0px;
+    bottom: 0px;
+  }
+
+  nav.borderYtoX a:hover:before,
+  nav.borderYtoX a:hover:after {
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+  }
 }
 
 /*HERO*/
@@ -106,22 +138,25 @@ main {
 
 /*ASIDE QUOTES*/
 aside {
-  flex: 1 1 0;
+  flex: 0.7 0.7 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  border-right: 0.5rem solid black;
 }
 
 .quote {
   flex-direction: column;
   display: flex;
   min-height: 10%;
-  max-width: 75%;
+  max-width: 80%;
   border: 1px solid var(--asidecolor);
   position: relative;
   color: var(--asidecolor);
   z-index: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .quote__span {
@@ -132,7 +167,6 @@ aside {
   position: absolute;
   top: -15%;
   align-self: center;
-  justify-self: flex-start;
 }
 
 .quote__p {
@@ -174,6 +208,22 @@ aside {
   border-color: var(--asidecolor) transparent transparent transparent;
 }
 
+div.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.skills h2 {
+  text-align: center;
+}
+
+ul {
+  margin: 1rem;
+  list-style: none;
+  text-align: center;
+}
+
 /*CONTENT*/
 .main__div {
   flex: 2 2 0;
@@ -197,7 +247,7 @@ aside {
 
 #work {
   flex: 3 3 0;
-  margin: 2rem 2rem 4rem 2rem;
+  margin: 2rem;
   text-align: center;
   background-color: var(--asidebackground);
   display: flex;
@@ -215,12 +265,15 @@ aside {
   grid-template-rows: repeat(4, 100px);
   justify-content: center;
   align-content: center;
-  gap: 3rem;
+  gap: 3.5rem;
 }
 
 .box {
   background: blue;
   color: white;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+  box-shadow: 0.4rem 0.4rem 0.5rem rgba(0, 0, 0, 0.9);
 }
 
 .box-one {
@@ -260,26 +313,6 @@ footer a {
   margin: 2rem;
 }
 
-/*RESPONSIVE DESIGN: MEDIA QUERIES*/
-@media (hover) {
-  /*If the device can hover as its primary pointer, then this will activate*/
-
-  .navigationbar__nav a:hover {
-    background-color: rgb(39, 39, 39);
-    border-color: #7db0fb;
-    color: white;
-    box-shadow: 0 0 10px 10px rgba(24, 117, 255, 0.25);
-    border-radius: 2rem;
-  }
-  .navigationbar__nav a:visited {
-    background-color: rgb(14, 14, 14);
-    border-color: rgb(14, 14, 14);
-    color: rgb(215, 215, 215);
-    box-shadow: rgb(14, 14, 14);
-    border-radius: 0rem;
-  }
-}
-
 @media screen and (max-width: 980px) {
   #work .gallery {
     width: 80%;
@@ -293,6 +326,18 @@ footer a {
 
   .box-one {
     grid-column: 1/2;
+  }
+
+  .quote__p {
+    font-size: 1.6rem;
+  }
+
+  .quote__span {
+    font-size: 1.8rem;
+    top: -10%;
+  }
+  .quote {
+    max-width: 81%;
   }
 }
 
@@ -316,12 +361,11 @@ footer a {
     text-align: center;
   }
 
-  .navigationbar__img {
-    display: none;
-  }
-
-  .navigationbar__nav a {
-    padding: 1vh 0rem;
+  nav.container a {
+    margin: none;
+    padding: 5px 5px;
+    padding: none;
+    font-size: 100;
   }
 
   .herowrapper {
@@ -352,6 +396,7 @@ footer a {
   aside {
     min-height: 60rem;
     flex: 1 1 0;
+    border-right: none;
   }
 
   .box-one {
@@ -359,10 +404,6 @@ footer a {
   }
 
   .quote__span {
-    font-size: 1.8rem;
-  }
-
-  .quote__p {
-    font-size: 1.6rem;
+    top: -20%;
   }
 }
