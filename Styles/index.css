@@ -8,6 +8,8 @@ html {
   --largenavheight: 7vh;
   --asidebackground: white;
   --asidecolor: black;
+  --leftPos: 50%;
+  --topPos: 50%;
 }
 
 body {
@@ -60,37 +62,6 @@ h4 {
   padding: 10px 10px;
   position: relative;
   cursor: pointer;
-}
-
-@media (hover: hover) {
-  /* Border from Y to X  */
-  nav.borderYtoX a:before,
-  nav.borderYtoX a:after {
-    position: absolute;
-    opacity: 0.5;
-    height: 100%;
-    width: 2px;
-    content: "";
-    background: #fff;
-    transition: all 0.3s;
-  }
-
-  nav.borderYtoX a:before {
-    left: 0px;
-    top: 0px;
-  }
-
-  nav.borderYtoX a:after {
-    right: 0px;
-    bottom: 0px;
-  }
-
-  nav.borderYtoX a:hover:before,
-  nav.borderYtoX a:hover:after {
-    opacity: 1;
-    height: 2px;
-    width: 100%;
-  }
 }
 
 /*HERO*/
@@ -259,13 +230,13 @@ ul {
 
 #work .gallery {
   margin: 1rem 2rem;
-  width: 70%;
+  width: 90%;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(4, 100px);
   justify-content: center;
   align-content: center;
-  gap: 3.5rem;
+  gap: 3rem;
 }
 
 .box {
@@ -313,6 +284,98 @@ footer a {
   margin: 2rem;
 }
 
+/*Only objects that have hover as their primary select feature can access this block*/
+@media (hover: hover) {
+  /* Nav Border from Y to X  */
+  nav.borderYtoX a:before,
+  nav.borderYtoX a:after {
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: "";
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  nav.borderYtoX a:before {
+    left: 0px;
+    top: 0px;
+  }
+
+  nav.borderYtoX a:after {
+    right: 0px;
+    bottom: 0px;
+  }
+
+  nav.borderYtoX a:hover:before,
+  nav.borderYtoX a:hover:after {
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+  }
+  /* Gallery button ripple effect */
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4,
+  .btn5 {
+    font-family: cursive;
+    padding: auto;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box span {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 3rem;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .box:hover span {
+    opacity: 1;
+  }
+
+  .btn1::before,
+  .btn2::before,
+  .btn3::before,
+  .btn4::before,
+  .btn5::before {
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 0rem;
+    height: 0rem;
+    top: var(--topPos);
+    left: var(--leftPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 2s, height 2s;
+  }
+
+  .btn1:hover::before {
+    width: 500rem;
+    height: 500rem;
+  }
+
+  .btn2:hover::before,
+  .btn3:hover::before,
+  .btn4:hover::before,
+  .btn5:hover::before {
+    width: 300rem;
+    height: 300rem;
+  }
+}
+
 @media screen and (max-width: 980px) {
   #work .gallery {
     width: 80%;
@@ -326,6 +389,7 @@ footer a {
 
   .box-one {
     grid-column: 1/2;
+    grid-row: 1/3;
   }
 
   .quote__p {

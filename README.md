@@ -34,13 +34,13 @@ No installation needed.
 
 The website can be found at: https://arishorts.github.io/portfolio/
 
-Use the navigation bar to jump to different sections. <br>
+Use the navigation bar to jump to different sections.<br>
 ![alt text](./Images/navbarhowto.JPG)
 
 Checkout some recent projects by clicking the boxes.<br>
 ![alt text](./Images/projects.JPG)
 
-Click the icons to visit more of my portfolios. <br>
+Click the icons to visit more of my portfolios.<br>
 ![alt text](./Images/moreportfolios.JPG)
 
 ## Badges
