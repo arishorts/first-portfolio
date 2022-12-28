@@ -239,6 +239,10 @@ ul {
   gap: 3rem;
 }
 
+.box span {
+  visibility: hidden;
+}
+
 .box {
   background: blue;
   color: white;
@@ -339,6 +343,7 @@ footer a {
     font-size: 3rem;
     opacity: 0;
     transition: opacity 0.5s;
+    visibility: visible;
   }
 
   .box:hover span {
